@@ -5,6 +5,8 @@
 //  /game/:uuid/quit -> POST requires valid auth token and ends the game returning the same thing as a GET to /game/:uuid
 //  Use the magic square for determining win condition: http://mathworld.wolfram.com/MagicSquare.html
 
+writeln("Here goes nothing")
+
 ticTacToeService := HttpServer clone do(
     setPort(1337)
 
