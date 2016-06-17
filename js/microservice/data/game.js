@@ -18,3 +18,7 @@ events.on('data:create:game', (details) => {
 
     events.emit(`data:created:game:${gameid}`, true);
 });
+
+events.on('data:move:game', (move) => {
+
+});
