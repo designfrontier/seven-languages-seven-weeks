@@ -1,16 +1,14 @@
 'use strict';
-const iters = process.argv.pop();
 
-const permute = (openCount, closeCount) => {
+const permute = (open, close = 0) => {
 
-  if (openCount === 0 && closeCount === 0) {
+  if (open === 0 && close === 0) {
     return 1;
-  } else if (openCount < 0 || closeCount < 0) {
+  } else if (open < 0 || close < 0) {
     return 0;
   }
 
-  return  permute(openCount - 1, closeCount + 1) +
-    permute(openCount, closeCount - 1);
+  return  permute(open - 1, close + 1) + permute(open, close - 1);
 };
 
-console.log(permute(iters, 0));
+console.log(permute(process.argv.pop()));
