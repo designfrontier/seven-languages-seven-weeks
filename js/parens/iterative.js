@@ -20,4 +20,4 @@ const iterativeSolve = (pairs = 0) => {
   return building.filter((s) => s[0] === 0 && s[1] === 0).length;
 }
 
-console.log(iterativeSolve(1))
+console.log(iterativeSolve(13))
